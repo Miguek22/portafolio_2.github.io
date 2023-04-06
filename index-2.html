@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de cambio de color con JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #contenedor1, #contenedor2, #contenedor3 {
+      width: 200px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    .celeste-fuerte {
+      background-color: #0099cc;
+    }
+    .celeste-normal {
+      background-color: #33b5e5;
+    }
+    .celeste-claro {
+      background-color: #99d6e8;
+    }
+    .rojo-fuerte {
+      background-color: #ff0000;
+    }
+    .rojo-normal {
+      background-color: #ff4444;
+    }
+    .rojo-claro {
+      background-color: #ff9999;
+    }
+  </style>
+  <script>
+    var botonPresionado = false;
+
+    function cambiarColor() {
+      var contenedores = document.querySelectorAll("#contenedor1, #contenedor2, #contenedor3");
+      var clasesCeleste = ["celeste-fuerte", "celeste-normal", "celeste-claro"];
+      var clasesRojo = ["rojo-fuerte", "rojo-normal", "rojo-claro"];
+      if (!botonPresionado) {
+        for (var i = 0; i < contenedores.length; i++) {
+          for (var j = 0; j < clasesCeleste.length; j++) {
+            if (contenedores[i].classList.contains(clasesCeleste[j])) {
+              contenedores[i].classList.remove(clasesCeleste[j]);
+              contenedores[i].classList.add(clasesRojo[j]);
+              break;
+            }
+          }
+        }
+        botonPresionado = true;
+      } else {
+        for (var i = 0; i < contenedores.length; i++) {
+          for (var j = 0; j < clasesRojo.length; j++) {
+            if (contenedores[i].classList.contains(clasesRojo[j])) {
+              contenedores[i].classList.remove(clasesRojo[j]);
+              contenedores[i].classList.add(clasesCeleste[j]);
+              break;
+            }
+          }
+        }
+        botonPresionado = false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="cambiarColor()">Haz clic para cambiar el color</button>
+  <div id="contenedor1" class="celeste-fuerte">Contenedor 1</div>
+  <div id="contenedor2" class="celeste-normal">Contenedor 2</div>
+  <div id="contenedor3" class="celeste-claro">Contenedor 3</div>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo de cambio de color con JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #contenedor1, #contenedor2, #contenedor3 {
+      width: 200px;
+      height: 100px;
+      margin-bottom: 20px;
+    }
+    .celeste {
+      background-color: #ADD8E6;
+    }
+    .rojo {
+      background-color: #FF0000;
+    }
+  </style>
+  <script>
+    function cambiarColor() {
+      var contenedores = document.querySelectorAll("#contenedor1, #contenedor2, #contenedor3");
+      for (var i = 0; i < contenedores.length; i++) {
+        if (contenedores[i].classList.contains("celeste")) {
+          contenedores[i].classList.remove("celeste");
+          contenedores[i].classList.add("rojo");
+        } else {
+          contenedores[i].classList.remove("rojo");
+          contenedores[i].classList.add("celeste");
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <button onclick="cambiarColor()">Haz clic para cambiar el color</button>
+  <div id="contenedor1" class="celeste">Contenedor 1</div>
+  <div id="contenedor2" class="celeste">Contenedor 2</div>
+  <div id="contenedor3" class="celeste">Contenedor 3</div>
+</body>
+</html> -->

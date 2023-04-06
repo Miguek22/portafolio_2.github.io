@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+    @font-face{
+        font-family: me123;
+        src: url('../font/me123.ttf') format('truetype');
+    }
+    /*-----------------COLORES--------------------*/
+    .celeste-fuerte {
+        overflow:hidden;
+        width: 200px; 
+        height: 200px;
+        position: relative;
+        top: 22px;
+        left: 22px;
+        border-radius:100px;
+        border: 2px solid #984534;
+        box-shadow: inset 0 0 5px #F22F08, 0 0 30px #F22F08;
+        background: radial-gradient(#ffffff, #00a8f3); 
+    }
+    .celeste-normal {
+    background-color: #33b5e5;
+    }
+    .celeste-claro {
+    background-color: #99d6e8;
+    }
+    .rojo-fuerte {
+        overflow:hidden;
+        width: 200px; 
+        height: 200px;
+        position: relative;
+        top: 22px;
+        left: 22px;
+        border-radius:100px;
+        border: 2px solid #433498;
+        box-shadow: inset 0 0 5px #088df2, 0 0 30px #0810f2;
+        background: radial-gradient(#ffffff, #00a8f3); 
+    }
+    .rojo-normal {
+    background-color: #ff4444;
+    }
+    .rojo-claro {
+    background-color: #ff9999;
+    }
+    /*-----------------CUERPO--------------------*/
+	body{
+		width: 100%;
+		height: 100%;
+        font-family: me123;
+        font-size: 15px;
+	}
+	.capa{
+		position: fixed;
+		width: 100%;
+		height: 100vh;
+		background: rgba(0,0,0,0.6);
+		z-index: -1;
+		top: 0;left: 0;
+	}
+	/*Estilos para el encabezado*/
+	.header{
+		width: 100%;
+        height: 100px;
+        position: fixed;
+		top: 0;left: 0;
+	}
+    /*Estilos menú lateral*/
+    #btn-menu{
+		display: none;
+	}
+	.container-menu{
+		position: relative;
+		background: rgba(0,0,0,0.5);
+		height: 100vh;
+		top: 0;left: 0;
+		transition: all 500ms ease;
+	}
+	.cont-menu{
+		width: 100%;
+		max-width: 250px;
+		background: #1c1c1c;
+		height: 100vh;
+		position: absolute;
+		transition: all 500ms ease;
+	}
+	.cont-menu nav{
+		transform: translateY(15%);
+        margin-top: -30px;
+	}
+	.cont-menu nav a{
+		display: block;
+		text-decoration: none;
+		padding: 12px;
+		color: #c7c7c7;
+		transition: all 400ms ease;
+	}
+	.cont-menu nav a:hover{
+        box-shadow: inset 0 0 5px red, 0 0 20px red;
+		background: #1f1f1f;
+	}
+	.cont-menu label{
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		color: #fff;
+		cursor: pointer;
+		font-size: 18px;
+	}
+    /*Estilos de la imagen de Perfil*/
+
+    /*animación y posición del logo del perfil*/
+    .imagen_perfil{
+        transition: all .4s ease;
+        max-width:100%;
+    }
+    /*añade la animación al pasar el cursor por arriba del logo del perfil*/
+    .imagen_perfil:hover{
+        transform:scale (1.05);
+        transition: all .4s ease;
+    }
+    .nombre{
+        color: #fff;
+        position: relative;
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    .nombre h2{
+        font-size: 20px;
+    }
+    .nombre-responsive{
+        display: none;
+    }
+    .btn-menu label{
+        color: #fff;
+        font-size: 25px;
+        cursor: pointer;
+        display: none;
+    }
+    /*-------------------Sección de Inicio--------------------*/
+    .contenedor, .contenedor_acerca_de, .contenedor-servicios, .contenedor-resumen{
+        position: relative;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 250px;
+        background-image: url('../img/inicio/fondo_3d_1.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size:cover;
+        justify-content: center;
+        padding: 13rem 0;
+    }
+    .contenedor-presentacion{
+        width: 100%;
+        height: 200px;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .titulo-superior{
+        width: 70%;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        margin: 10px 0 10px 0;
+    }
+    .titulo-superior h5{
+        margin: auto;
+        color: #fff;
+    }
+    .titulo-presentacion{
+        width: 70%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        margin: 10px 0 10px 0;
+    }
+    .titulo-presentacion h1{
+        margin: auto;
+        color: #fff;
+    }
+    .subtitulo-presentacion{
+        width: 70%;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        margin: 10px 0 10px 0;
+    }
+    .subtitulo-presentacion h4{
+        margin: auto;
+        color: #fff;
+    }
+    .boton{
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+        margin: auto;
+        margin-top: 15px;
+    }
+    .boton button{
+        color: #fff;
+        background: #F22F08;
+    }
+    .boton button:hover{
+        color: #fff;
+        background: #F22F08;
+        border: 2px solid #fff;
+        box-shadow: inset 0 0 5px red, 0 0 10px red;
+    }
+    /*-------------------Sección Acerca De--------------------*/
+    .contenedor_acerca_de{
+        padding: 2rem 0;
+        background: #561E18;
+    }
+    .estilo-contenedor-lista{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .estilo-lista li{
+        color: #fff;
+    }
+    .titulo-acerca-de{
+        text-align: center;
+        margin: 20px 0 20px 0;
+    }
+    .titulo-acerca-de h1{
+        margin: auto;
+        color: #fff;
+    }
+    .subtitulo-acerca-de{
+        text-align: center;
+        margin: 20px 0 20px 0;
+        color: #fff;
+    }
+    .contenido-acerca-de p{
+        color: #fff;
+        text-align: center;
+    }
+    .link-boton{
+        text-align: center;
+    }
+    .contenedor-hobbies{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .hobbies{
+        position: relative;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        margin: 10px 10px 5px 10px;
+        background: #441a1a;
+        border-radius: 20%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        box-shadow: inset 0 0 5px red, 0 0 2px red;
+        transition: transform 0.3s ease-in-out;
+    }
+    .hobbies:hover {
+        transform: scale(1.1);
+    }
+    
+    .mensaje {
+        position: absolute; /* Posicionamos el mensaje encima del contenedor */
+        top: calc(-220% + 10px); /* Lo colocamos justo debajo del contenedor */
+        left: 50%; /* Lo centramos horizontalmente */
+        transform: translateX(-50%); /* Ajustamos la posición para centrarlo exactamente */
+        background-color: #fff; /* Le damos un color de fondo al mensaje */
+        padding: 10px; /* Agregamos un poco de espacio alrededor del contenido del mensaje */
+        border-radius: 5px; /* Redondeamos las esquinas del mensaje */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Agregamos una sombra suave para dar profundidad */
+        opacity: 0; /* Inicialmente hacemos el mensaje invisible */
+        transition: opacity 0.2s ease-in-out; /* Agregamos una transición suave */
+    }
+    
+    .hobbies:hover .mensaje {
+        opacity: 1; /* Hacemos visible el mensaje al pasar el cursor por encima del contenedor */
+    }
+    
+    .mensaje p {
+        margin: 0; /* Eliminamos el margen por defecto del párrafo */
+    }
+    /*-------------------Sección Servicios--------------------*/
+    .contenedor-servicios{
+        padding: 2rem 0;
+        background: #8d2418;
+    }
+    .contenedor-items-servicios{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .color-blanco{
+        color: #fff;
+    }
+    .margen-icono{
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+    .margen-fila-servicios{
+        margin-top: 50px;
+    }
+     /*-------------------Sección Resumen--------------------*/
+    .contenedor-resumen{
+        color: #fff;
+        padding: 2rem 0;
+        background: #561E18;
+    }
+    /*--------------------------RESPONSIVE---------------------------*/
+    @media (max-width:952px){
+        .celeste-fuerte img{
+            display: none;
+        }
+        .celeste-fuerte{
+            display: none;
+        }
+        .nombre{
+            display: none;
+        }
+        .nombre-responsive{
+            padding: 10px 0 0 10px;
+            display: flex;
+            color: #fff;
+        }
+        .btn-menu label{
+            display: block;
+            float: right;
+            font-size: 25px;
+        }
+        .container-menu{
+            width: 100%;
+            max-width: 1440px;
+            height: 8vh;
+		    background: rgba(0,0,0,0.5);
+	        transition: all 500ms ease;
+        }
+        .cont-menu{
+            position: relative;
+            width: 100%;
+            max-width: 1440px;
+            height: 50px;
+        }
+        .cont-menu nav{
+            opacity: 0;
+            background: #1c1c1c;
+            visibility: hidden;
+        }
+        #btn-menu:checked ~ .cont-menu nav{
+            opacity: 1;
+            margin-top: -50px;
+            visibility: visible;
+            background: #1c1c1c;
+            transition: all 500ms ease;
+        }
+        .contenedor, .contenedor_acerca_de, .contenedor-servicios, .contenedor-resumen{
+            z-index: -1;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 13rem 0;
+        }
+        .contenido-acerca-de{
+            padding: 0px 35px;
+        }
+        .contenedor-servicios{
+            z-index: -1;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 4rem 0;
+        }
+        .contenedor-resumen{
+            z-index: -1;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 4rem 0;
+        }
+        
+        .contenedor_acerca_de{
+            padding: 7rem 0;
+        }
+        .margen-fila-servicios{
+            margin-top: 10px;
+        }
+        .color-blanco{
+            color: #fff;
+            padding: 0px 35px;
+        }
+    }
+
