@@ -33,9 +33,9 @@
                     <a href="#acerca_de" class="text-center">Acerca De</a>
                     <a href="#servicios" class="text-center">Servicios</a>
                     <a href="#resumen" class="text-center">Resumen</a>
-                    <a href="#proyectos" class="text-center">Proyectos</a>
+                    <!-- <a href="#proyectos" class="text-center">Proyectos</a> -->
                     <a href="#logros" class="text-center">Logros</a>
-                    <a href="" class="text-center">Contacto</a>
+                    <a href="#contacto" class="text-center">Contacto</a>
                 </nav>
                 <div class="btn-menu">
                     <label for="btn-menu" class="icon-menu"></label>
@@ -51,13 +51,13 @@
                 <h5>Bienvenidos</h5>
             </div>
             <div class="titulo-presentacion">
-                <h1>Soy un programador</h1>
+                <h1>Desarrollador de Software SSR</h1>
             </div>
             <div class="subtitulo-presentacion">
                 <h4>Técnico en Programación</h4>
             </div>
             <div class="boton">
-                <button type="button" class="btn">Contáctame</button>
+                <button type="button" class="btn"><a class="button-contact" href="#contacto">Contáctame</a></button>
             </div>
         </div>
     </div>
@@ -350,9 +350,39 @@
                   <small class="fg-theme">W3 Networking (TuCody - realizado en equipo)</small>
                   <p class="parrafos">Es un sistema de gestión de proyectos y dispositivos realizado en Vue - Laravel, con un corto plazo de tiempo (1 mes), me encargué de realizar la interfaz Front-end, reutilizando componentes, creando rutas, y la tarea más importante, crear desde 0 una tabla dinámica con multiples funciones como crear, editar, eliminar, desplazamiento horizontal, insercción de multiples columnas, validaciones de datos, envíos automáticos, etc. También realicé muchas tareas con Vuex, para realizar las peticiones correspondientes, manejar los datos obtenidos, guardarlos en estados, etc. Un proyecto bastante complejo el cual en conjunto con GG Management, elevaron muchisimo mi nivel como desarrollador.</p>
                 </div>
+                <div class="details1">
+                    <br>
+                    <small class="fg-theme">ISL (TuCody - realizado en equipo)</small>
+                    <p class="parrafos">Es un sistema de gestión de eventos realizado por el FC Barcelona en los Estados Unidos, me toco hacer mantenimiento y reestructurar buena parte del formulario de inscripción a dichos eventos por parte de los usuarios.</p>
+                  </div>
               </li>
             </ul>
           </div>
+        </div>
+    </div>
+     <!--------------------FIN SECCIÓN DE LOGROS--------------------->
+    <!--------------------SECCIÓN DE CONTACTO--------------------->
+    <div class="contenedor_contacto" id="contacto">
+        <div class="row">
+            <div class="titulo-acerca-de">
+     
+                <div class="form-container">
+                    <h2>Contáctame</h2>
+                    <form action="https://formsubmit.co/miguelgomez1133@gmail.com" method="POST">
+                      <label class="form-label" for="nombre">Nombre:</label>
+                      <input class="form-input" type="text" id="nombre" name="nombre" required>
+                
+                      <label class="form-label" for="email">Email:</label>
+                      <input class="form-input" type="email" id="email" name="email" required>
+                
+                      <label class="form-label" for="mensaje">Mensaje:</label>
+                      <textarea class="form-input" id="mensaje" name="mensaje" rows="4" required></textarea>
+                      <div class="boton">
+                        <button type="submit" class="btn"><a class="button-contact">Enviar</a></button>
+                      </div>
+                    </form>
+                  </div>
+            </div>
         </div>
     </div>
     <!-------------------SCRIPTS---------------------->
