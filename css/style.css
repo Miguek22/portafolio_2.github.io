@@ -252,7 +252,7 @@
     }
     /*-------------------Sección Acerca De--------------------*/
     .contenedor_acerca_de{
-        padding: 2rem 0;
+        padding: 8rem 0;
         background: #561E18;
     }
     .estilo-contenedor-lista{
@@ -325,23 +325,56 @@
     
     .mensaje {
         font-family: Myriad Pro;
-        position: absolute; /* Posicionamos el mensaje encima del contenedor */
-        top: calc(-220% + 10px); /* Lo colocamos justo debajo del contenedor */
-        left: 50%; /* Lo centramos horizontalmente */
-        transform: translateX(-50%); /* Ajustamos la posición para centrarlo exactamente */
-        background-color: #fff; /* Le damos un color de fondo al mensaje */
-        padding: 10px; /* Agregamos un poco de espacio alrededor del contenido del mensaje */
-        border-radius: 5px; /* Redondeamos las esquinas del mensaje */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Agregamos una sombra suave para dar profundidad */
-        opacity: 0; /* Inicialmente hacemos el mensaje invisible */
-        transition: opacity 0.2s ease-in-out; /* Agregamos una transición suave */
+        position: absolute; 
+        top: calc(-220% + 10px);
+        left: 50%;
+        transform: translate(-50%, 250%);
+        background-color: #e86f6f;
+        border: 1px solid #fff;
+        box-shadow: inset 0 0 5px red, 0 0 10px red;
+        box-sizing: border-box;
+        color: #FFF;
+        padding: 10px; 
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        opacity: 0; 
+        z-index: 1000;
+        transition: opacity 0.2s ease-in-out; 
     }
     
     .hobbies:hover .mensaje {
-        opacity: 1; /* Hacemos visible el mensaje al pasar el cursor por encima del contenedor */
+        opacity: 1;
+      
     }
     
     .mensaje p {
+        margin: 0; /* Eliminamos el margen por defecto del párrafo */
+    }
+    .mensaje_2 {
+        font-family: Myriad Pro;
+        position: absolute; 
+        top: calc(-220% + 10px);
+        left: 50%;
+        transform: translate(-50%, 380%);
+        background-color: #e86f6f;
+        border: 1px solid #fff;
+        box-shadow: inset 0 0 5px red, 0 0 10px red;
+        box-sizing: border-box;
+        color: #FFF;
+        padding: 10px; 
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        opacity: 0; 
+        z-index: 1000;
+        transition: opacity 0.2s ease-in-out; 
+    }
+    
+    .hobbies:hover .mensaje_2 {
+        opacity: 1;
+      
+    }
+    
+    .mensaje_2 p {
         margin: 0; /* Eliminamos el margen por defecto del párrafo */
     }
     /*-------------------Sección Servicios--------------------*/
@@ -409,6 +442,9 @@
       }
     /*--------------------------RESPONSIVE---------------------------*/
     @media (max-width:952px){
+        .hobbies{
+            margin: 10px 2px 5px 2px;
+        }
         .celeste-fuerte img{
             display: none;
         }
@@ -461,8 +497,11 @@
             justify-content: center;
             padding: 13rem 0;
         }
-        .contenido-acerca-de{
+        /* .contenido-acerca-de{
             padding: 0% 35%;
+        } */
+        .titulo-presentacion {
+            margin: 20px 0 50px 0;
         }
         .contenedor-servicios, .contenedor-logros{
             z-index: -1;
@@ -490,6 +529,9 @@
         .color-blanco{
             color: #fff;
             padding: 0px 35px;
+        }
+        .contenedor_contacto{
+            margin-left: 0px !important;
         }
     }
 
