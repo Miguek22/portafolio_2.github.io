@@ -11,6 +11,10 @@
     .parrafos{
         font-family: "Myriad Pro" !important;
     }
+    .parrafos-logros{
+        font-family: "Myriad Pro" !important;
+        font-size: 20px;
+    }
     /*-----------------COLORES--------------------*/
     .celeste-fuerte {
         overflow:hidden;
@@ -396,7 +400,11 @@
     }
     .margen-icono{
         margin-top: 20px;
-        margin-bottom: 20px
+        margin-bottom: 20px;
+        transition: transform 0.3s ease;
+    }
+    .margen-icono:hover{
+        transform: scale(2);
     }
     .margen-fila-servicios{
         margin-top: 50px;
@@ -534,4 +542,16 @@
             margin-left: 0px !important;
         }
     }
+    .margin-title-logros{
+        margin-bottom: 20px;
+    }
+    .title-cards{
+        font-family: "Myriad Pro" !important;
+        margin-bottom: 15px;
+        font-size: 35px;
+        font-weight: bold;
+    }
 
+    .padding-right{
+        padding-right: 60px;
+    }
