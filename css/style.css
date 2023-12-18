@@ -10,9 +10,12 @@
     /*-----------------FUENTES GLOBALES---------------*/
     .parrafos{
         font-family: "Myriad Pro" !important;
+        text-align: justify !important;
+        font-size: 15px;
     }
     .parrafos-logros{
         font-family: "Myriad Pro" !important;
+        text-align: justify !important;
         font-size: 20px;
     }
     /*-----------------COLORES--------------------*/
@@ -419,10 +422,14 @@
         padding-left: 40px;
         padding-right: 40px;
     }
-    .img-fluid{
+    .img-fluid {
         border-radius: 5%;
+        transition: transform 0.3s ease;
     }
-
+    
+    .img-fluid:hover {
+        transform: scale(1.1); 
+    }
     /*-------------------Sección Contacto--------------------*/
     .form-container {
         width: 100%;
@@ -554,4 +561,8 @@
 
     .padding-right{
         padding-right: 60px;
+    }
+    .title{
+        color: #f2b408;
+        font-size: 25px;
     }
