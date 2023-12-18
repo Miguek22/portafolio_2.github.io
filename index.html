@@ -94,8 +94,8 @@
             </div>
             <div class="col-lg-6 wow fadeInRight">
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 hobbies">
+                    <div class="row justify-content-center" id="hobbiesRow">
+                        <!-- <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 hobbies">
                             <img height="50" width="70" src="img/hobbies/juegos.svg" alt="">
                             <div class="mensaje">
                                 <p>Videojuegos</p>
@@ -118,10 +118,10 @@
                             <div class="mensaje">
                                 <p>Cocinar</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
-                    <div class="row justify-content-center">
-                        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 hobbies">
+                    <div class="row justify-content-center" id="hobbiesRow_2">
+                        <!-- <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 hobbies">
                             <img height="70" width="70" src="img/hobbies/espacio.svg" alt="">
                             <div class="mensaje_2">
                                 <p>Temas Espaciales</p>
@@ -144,7 +144,7 @@
                             <div class="mensaje_2">
                                 <p>Aprender Idiomas</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -539,6 +539,59 @@
         crossorigin="anonymous"></script>
     <script src="js/style.js"></script>
     <script src="js/colores.js"></script>
+    <script>
+        async function cargarDatosDesdeJSON() {
+            try {
+                const response = await fetch('json/hobbies.json');
+                const hobbiesData = await response.json();
+                console.log("HOBIEES JSON", hobbiesData);
+                const hobbiesContainer = document.getElementById('hobbiesRow');
+                const hobbiesContainer2 = document.getElementById('hobbiesRow_2');
+
+                const primeraFila = hobbiesData.slice(0, 4);
+                const segundaFila = hobbiesData.slice(4);
+
+                function generarCajitas(data, container) {
+                    data.forEach((hobby, index) => {
+                        const hobbyBox = document.createElement('div');
+                        hobbyBox.className = 'col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3 hobbies';
+
+                        const img = document.createElement('img');
+                        img.src = hobby.imagen;
+                        img.alt = '';
+                        if (index === 0) {
+                            img.height = 50;
+                            img.width = 70;
+                        } else {
+                            img.height = 70;
+                            img.width = 70;
+                        }
+
+                        const mensaje = document.createElement('div');
+                        // console.log("INDESXX", index)
+                        if(hobby.tipo === "espacio" || hobby.tipo === "pasear" || hobby.tipo === "cine" || hobby.tipo === "ingles"){
+                            mensaje.className = 'mensaje_2';
+                        } else {
+                            mensaje.className = 'mensaje';
+                        }
+                        
+                        mensaje.innerHTML = `<p>${hobby.mensaje}</p>`;
+
+                        hobbyBox.appendChild(img);
+                        hobbyBox.appendChild(mensaje);
+
+                        container.appendChild(hobbyBox);
+                    });
+                }
+
+                generarCajitas(primeraFila, hobbiesContainer);
+                generarCajitas(segundaFila, hobbiesContainer2);
+            } catch (error) {
+                console.error("Chale algo fallo :u", error);
+            }
+        }
+        cargarDatosDesdeJSON();
+    </script>
 </body>
 
 </html>

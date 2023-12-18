@@ -1,0 +1,42 @@
+[
+    {
+        "tipo": "juegos",
+        "imagen": "img/hobbies/juegos.svg",
+        "mensaje": "Videojuegos"
+    },
+    {
+        "tipo": "futbol",
+        "imagen": "img/hobbies/futbol.svg",
+        "mensaje": "Fútbol"
+    },
+    {
+        "tipo": "musica",
+        "imagen": "img/hobbies/musica.svg",
+        "mensaje": "Música"
+    },
+    {
+        "tipo": "cocinar",
+        "imagen": "img/hobbies/cocinar.svg",
+        "mensaje": "Cocinar"
+    },
+    {
+        "tipo": "espacio",
+        "imagen": "img/hobbies/espacio.svg",
+        "mensaje": "Temas Espaciales"
+    },
+    {
+        "tipo": "pasear",
+        "imagen": "img/hobbies/pasear.svg",
+        "mensaje": "Salir a Pasear"
+    },
+    {
+        "tipo": "cine",
+        "imagen": "img/hobbies/cine.svg",
+        "mensaje": "Ver Películas"
+    },
+    {
+        "tipo": "ingles",
+        "imagen": "img/hobbies/ingles.svg",
+        "mensaje": "Aprender Idiomas"
+    }
+]
